@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31515.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.Pedidos.Models", "App.Pedidos.Models\App.Pedidos.Models.csproj", "{A87A1DD3-B8E6-46A7-8F81-572A48B06BEC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Datos", "Datos", "{C8A799B0-85F0-4F06-9767-172272238BF2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Servicios", "Servicios", "{E7AF3848-07EB-41FF-8126-24DF1F81B2BC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{9494467B-E93F-4BEA-AAD0-B1B243947C92}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.Pedidos.Repositories", "App.Pedidos.Repositories\App.Pedidos.Repositories.csproj", "{1DD6948A-7643-41E5-8012-BD5D2E9DD2ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.Pedidos.Repositories.Dapper", "App.Pedidos.Repositories.Dapper\App.Pedidos.Repositories.Dapper.csproj", "{EEB0AAF8-0954-483F-8021-2E984AC7A9F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.Pedidos.UnitOfWork", "App.Pedidos.UnitOfWork\App.Pedidos.UnitOfWork.csproj", "{4016A7BB-846F-4DB4-B1C9-34665D6AE443}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A87A1DD3-B8E6-46A7-8F81-572A48B06BEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A87A1DD3-B8E6-46A7-8F81-572A48B06BEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A87A1DD3-B8E6-46A7-8F81-572A48B06BEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A87A1DD3-B8E6-46A7-8F81-572A48B06BEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DD6948A-7643-41E5-8012-BD5D2E9DD2ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DD6948A-7643-41E5-8012-BD5D2E9DD2ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DD6948A-7643-41E5-8012-BD5D2E9DD2ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DD6948A-7643-41E5-8012-BD5D2E9DD2ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEB0AAF8-0954-483F-8021-2E984AC7A9F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEB0AAF8-0954-483F-8021-2E984AC7A9F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEB0AAF8-0954-483F-8021-2E984AC7A9F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEB0AAF8-0954-483F-8021-2E984AC7A9F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4016A7BB-846F-4DB4-B1C9-34665D6AE443}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4016A7BB-846F-4DB4-B1C9-34665D6AE443}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4016A7BB-846F-4DB4-B1C9-34665D6AE443}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4016A7BB-846F-4DB4-B1C9-34665D6AE443}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A87A1DD3-B8E6-46A7-8F81-572A48B06BEC} = {C8A799B0-85F0-4F06-9767-172272238BF2}
+		{1DD6948A-7643-41E5-8012-BD5D2E9DD2ED} = {C8A799B0-85F0-4F06-9767-172272238BF2}
+		{EEB0AAF8-0954-483F-8021-2E984AC7A9F3} = {C8A799B0-85F0-4F06-9767-172272238BF2}
+		{4016A7BB-846F-4DB4-B1C9-34665D6AE443} = {C8A799B0-85F0-4F06-9767-172272238BF2}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C66912B6-90D2-4C03-8882-3B5E601B35C5}
+	EndGlobalSection
+EndGlobal
