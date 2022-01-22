@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace App.Pedidos.Models
 {
-    class TipoTamanio
+    public class TipoTamanio
     {
+        public int id { get; set; }
+        public string Descripcion { get; set; }
     }
 }

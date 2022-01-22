@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace App.Pedidos.Models
 {
-    class Cliente
+    public class Cliente
     {
+        public int id { get; set; }
+        public string Descripcion { get; set; }
+        public string telefono { get; set; }
+        public string email { get; set; }
     }
 }

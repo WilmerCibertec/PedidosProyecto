@@ -8,6 +8,8 @@ namespace App.Pedidos.Models
 {
     public class Categoria
     {
-
+        public int id  { get; set; }
+        public string Descripcion { get; set; }
+        public bool MyProperty { get; set; }
     }
 }
