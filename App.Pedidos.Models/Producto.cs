@@ -13,5 +13,6 @@ namespace App.Pedidos.Models
         public int idProducto { get; set; }
         public int idCategoria { get; set; }
         public string Descripcion { get; set; }
+        public bool Estado { get; set; }
     }
 }
