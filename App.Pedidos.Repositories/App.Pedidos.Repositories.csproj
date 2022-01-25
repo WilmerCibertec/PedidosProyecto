@@ -41,8 +41,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ICategoriaRepository.cs" />
+    <Compile Include="IClienteRepository.cs" />
+    <Compile Include="IEstadoRepository.cs" />
+    <Compile Include="IPedidoRepository.cs" />
     <Compile Include="IProductoRepository.cs" />
+    <Compile Include="IProductoTamanioRepository.cs" />
     <Compile Include="IRepository.cs" />
+    <Compile Include="ITipoTamanioRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

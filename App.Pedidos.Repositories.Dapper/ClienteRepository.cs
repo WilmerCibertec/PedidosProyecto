@@ -10,26 +10,26 @@ using System.Threading.Tasks;
 
 namespace App.Pedidos.Repositories.Dapper
 {
-    public class ProductoRepository:Repository<Producto>,IProductoRepository
+    public class ClienteRepository:Repository<Cliente>,IClienteRepository
     {
-        public ProductoRepository(string connectionString) : base(connectionString)
+        public ClienteRepository(string connectionString) : base(connectionString)
         { }
-        public Producto BuscarPorId(int id)
+        public Cliente BuscarPorId(int id)
         {
             using (var connection = new SqlConnection(_connectionString))
             {
-                return connection.GetAll<Producto>().Where(c => c.idProducto.Equals(id)).First();
+                return connection.GetAll<Cliente>().Where(c => c.idCliente.Equals(id)).First();
             }
         }
 
-        public async Task<IEnumerable<Producto>> Listar(string nombre)
+        public async Task<IEnumerable<Cliente>> Listar(string nombre)
         {
             using (var connection = new SqlConnection(_connectionString))
             {
                 var parameters = new DynamicParameters();
                 parameters.Add("@nombre", nombre);
-                return await connection.QueryAsync<Producto>
-                    ("Select idProducto, idCategoria, Descripcion from dbo.Producto" +
+                return await connection.QueryAsync<Cliente>
+                    ("Select idCLiente, Descripcion, Telefono, Txt_email from dbo.Cliente" +
                       "Where Descripcion like '%@nombre%'", parameters, commandType: System.Data.CommandType.Text);
             }
 
@@ -40,8 +40,8 @@ namespace App.Pedidos.Repositories.Dapper
             {
                 var parameters = new DynamicParameters();
                 parameters.Add("@id", id);
-                return await connection.ExecuteAsync("Delete from dbo.Producto " +
-                                                "where idProducto = @id", parameters,
+                return await connection.ExecuteAsync("Delete from dbo.Cliente " +
+                                                "where idCliente = @id", parameters,
                                                 commandType: System.Data.CommandType.Text);
             }
         }

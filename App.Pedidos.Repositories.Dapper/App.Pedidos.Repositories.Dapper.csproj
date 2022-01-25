@@ -64,9 +64,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CategoriaRepository.cs" />
+    <Compile Include="ClienteRepository.cs" />
+    <Compile Include="EstadoRepository.cs" />
+    <Compile Include="PedidoRepository.cs" />
     <Compile Include="ProductoRepository.cs" />
+    <Compile Include="ProductoTamanioRepository.cs" />
     <Compile Include="Repository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TipoTamanioRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\App.Pedidos.Models\App.Pedidos.Models.csproj">
+      <Project>{a87a1dd3-b8e6-46a7-8f81-572a48b06bec}</Project>
+      <Name>App.Pedidos.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\App.Pedidos.Repositories\App.Pedidos.Repositories.csproj">
+      <Project>{1dd6948a-7643-41e5-8012-bd5d2e9dd2ed}</Project>
+      <Name>App.Pedidos.Repositories</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

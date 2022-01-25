@@ -10,26 +10,26 @@ using System.Threading.Tasks;
 
 namespace App.Pedidos.Repositories.Dapper
 {
-    public class ProductoRepository:Repository<Producto>,IProductoRepository
+    public class TipoTamanioRepository:Repository<TipoTamanio>,ITipoTamanioRepository
     {
-        public ProductoRepository(string connectionString) : base(connectionString)
+        public TipoTamanioRepository(string connectionString) : base(connectionString)
         { }
-        public Producto BuscarPorId(int id)
+        public TipoTamanio BuscarPorId(int id)
         {
             using (var connection = new SqlConnection(_connectionString))
             {
-                return connection.GetAll<Producto>().Where(c => c.idProducto.Equals(id)).First();
+                return connection.GetAll<TipoTamanio>().Where(c => c.idTamanio.Equals(id)).First();
             }
         }
 
-        public async Task<IEnumerable<Producto>> Listar(string nombre)
+        public async Task<IEnumerable<TipoTamanio>> Listar(string nombre)
         {
             using (var connection = new SqlConnection(_connectionString))
             {
                 var parameters = new DynamicParameters();
                 parameters.Add("@nombre", nombre);
-                return await connection.QueryAsync<Producto>
-                    ("Select idProducto, idCategoria, Descripcion from dbo.Producto" +
+                return await connection.QueryAsync<TipoTamanio>
+                    ("Select idTamanio, Descripcion from dbo.Tipo_Tamanio" +
                       "Where Descripcion like '%@nombre%'", parameters, commandType: System.Data.CommandType.Text);
             }
 
@@ -40,8 +40,8 @@ namespace App.Pedidos.Repositories.Dapper
             {
                 var parameters = new DynamicParameters();
                 parameters.Add("@id", id);
-                return await connection.ExecuteAsync("Delete from dbo.Producto " +
-                                                "where idProducto = @id", parameters,
+                return await connection.ExecuteAsync("Delete from dbo.Tipo_Tamanio " +
+                                                "where idTamanio = @id", parameters,
                                                 commandType: System.Data.CommandType.Text);
             }
         }

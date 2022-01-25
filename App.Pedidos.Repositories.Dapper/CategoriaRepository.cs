@@ -10,29 +10,29 @@ using System.Threading.Tasks;
 
 namespace App.Pedidos.Repositories.Dapper
 {
-    public class ProductoRepository:Repository<Producto>,IProductoRepository
+    public class CategoriaRepository:Repository<Categoria>,ICategoriaRepository
     {
-        public ProductoRepository(string connectionString) : base(connectionString)
+        public CategoriaRepository(string connectionString) : base(connectionString)
         { }
-        public Producto BuscarPorId(int id)
+        public Categoria BuscarPorId(int id)
         {
             using (var connection = new SqlConnection(_connectionString))
             {
-                return connection.GetAll<Producto>().Where(c => c.idProducto.Equals(id)).First();
+                return connection.GetAll<Categoria>().Where(c => c.idCategoria.Equals(id)).First();
             }
         }
 
-        public async Task<IEnumerable<Producto>> Listar(string nombre)
+        public async Task<IEnumerable<Categoria>> Listar(string nombre)
         {
             using (var connection = new SqlConnection(_connectionString))
             {
                 var parameters = new DynamicParameters();
                 parameters.Add("@nombre", nombre);
-                return await connection.QueryAsync<Producto>
-                    ("Select idProducto, idCategoria, Descripcion from dbo.Producto" +
-                      "Where Descripcion like '%@nombre%'", parameters, commandType: System.Data.CommandType.Text);
+                return await connection.QueryAsync<Categoria>
+                    ("Select idCategoria, Descripcion, Estado from dbo.Categoria" +
+                      "Where Descripcion like '%@nombre%'",parameters , commandType:System.Data.CommandType.Text);
             }
-
+                
         }
         public async Task<int> Eliminar(int id)
         {
@@ -40,8 +40,9 @@ namespace App.Pedidos.Repositories.Dapper
             {
                 var parameters = new DynamicParameters();
                 parameters.Add("@id", id);
-                return await connection.ExecuteAsync("Delete from dbo.Producto " +
-                                                "where idProducto = @id", parameters,
+                return await connection.ExecuteAsync("update dbo.Categoria " +
+                                                "set Estado = 0 " +
+                                                "where idCategoria = @id", parameters,
                                                 commandType: System.Data.CommandType.Text);
             }
         }

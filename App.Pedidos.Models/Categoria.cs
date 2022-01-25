@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dapper.Contrib.Extensions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,8 @@ namespace App.Pedidos.Models
 {
     public class Categoria
     {
-        public int id  { get; set; }
+        [ExplicitKey]
+        public int idCategoria  { get; set; }
         public string Descripcion { get; set; }
         public bool MyProperty { get; set; }
     }
