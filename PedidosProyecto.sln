@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.Pedidos.Repositories.Da
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.Pedidos.UnitOfWork", "App.Pedidos.UnitOfWork\App.Pedidos.UnitOfWork.csproj", "{4016A7BB-846F-4DB4-B1C9-34665D6AE443}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.UI.WebMVC", "App.UI.WebMVC\App.UI.WebMVC.csproj", "{97C9C8F6-A04C-49CC-BEB9-4D6877F786F5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{4016A7BB-846F-4DB4-B1C9-34665D6AE443}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4016A7BB-846F-4DB4-B1C9-34665D6AE443}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4016A7BB-846F-4DB4-B1C9-34665D6AE443}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97C9C8F6-A04C-49CC-BEB9-4D6877F786F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97C9C8F6-A04C-49CC-BEB9-4D6877F786F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97C9C8F6-A04C-49CC-BEB9-4D6877F786F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97C9C8F6-A04C-49CC-BEB9-4D6877F786F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,6 +54,7 @@ Global
 		{1DD6948A-7643-41E5-8012-BD5D2E9DD2ED} = {C8A799B0-85F0-4F06-9767-172272238BF2}
 		{EEB0AAF8-0954-483F-8021-2E984AC7A9F3} = {C8A799B0-85F0-4F06-9767-172272238BF2}
 		{4016A7BB-846F-4DB4-B1C9-34665D6AE443} = {C8A799B0-85F0-4F06-9767-172272238BF2}
+		{97C9C8F6-A04C-49CC-BEB9-4D6877F786F5} = {9494467B-E93F-4BEA-AAD0-B1B243947C92}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C66912B6-90D2-4C03-8882-3B5E601B35C5}

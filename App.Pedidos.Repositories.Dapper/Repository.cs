@@ -16,11 +16,11 @@ namespace App.Pedidos.Repositories.Dapper
             SqlMapperExtensions.TableNameMapper = (type) => { return $"{type.Name}"; };
             _connectionString = connectionString;
         }
-        public Task<int> Agregar(T entidad)
+        public async Task<int> Agregar(T entidad)
         {
             using (var connection = new SqlConnection(_connectionString))
             {
-                return connection.InsertAsync(entidad);
+                return await connection.InsertAsync(entidad);
             }
         }
         public Task<T> Obtener(T entidad)
@@ -30,39 +30,39 @@ namespace App.Pedidos.Repositories.Dapper
                 return connection.GetAsync<T>(entidad);
             }
         }
-        public Task<T> Obtener(int id)
+        public async Task<T> Obtener(int id)
         {
             using (var connection = new SqlConnection(_connectionString))
             {
-                return connection.GetAsync<T>(id);
+                return await connection.GetAsync<T>(id);
             }
         }
-        public Task<T> Obtener(string id)
+        public async Task<T> Obtener(string id)
         {
             using (var connection = new SqlConnection(_connectionString))
             {
-                return connection.GetAsync<T>(id);
+                return await connection.GetAsync<T>(id);
             }
         }
-        public Task<IEnumerable<T>> Listar()
+        public async Task<IEnumerable<T>> Listar()
         {
             using (var connection = new SqlConnection(_connectionString))
             {
-                return connection.GetAllAsync<T>();
+                return await connection.GetAllAsync<T>();
             }
         }
-        public Task<bool> Eliminar(T entidad)
+        public async  Task<bool> Eliminar(T entidad)
         {
             using (var connection = new SqlConnection(_connectionString))
             {
-                return connection.DeleteAsync<T>(entidad);
+                return await connection.DeleteAsync<T>(entidad);
             }
         }
-        public Task<bool> Modificar(T entidad)
+        public async Task<bool> Modificar(T entidad)
         {
             using (var connection = new SqlConnection(_connectionString))
             {
-                return connection.UpdateAsync<T>(entidad);
+                return await connection.UpdateAsync<T>(entidad);
             }
         }
     }

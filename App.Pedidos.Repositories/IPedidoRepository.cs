@@ -9,7 +9,12 @@ namespace App.Pedidos.Repositories
 {
     public interface IPedidoRepository:IRepository<Pedido>
     {
-        Pedido BuscarPorId(int id);
-        Task<int> Eliminar(int id);
+        Task<int> InsertarPedido(Pedido pedido);
+
+        Task<IEnumerable<string>> ListarEnvio();
+
+        Task<IEnumerable<string>> ListarRecepcion();
+
+        Task<int> ActualizarEnvioRecepcion(int id, int estado);
     }
 }
